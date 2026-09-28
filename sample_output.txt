@@ -1,0 +1,9 @@
+Package Sorting: Merge Sort vs Quick Sort
+Original order:
+(P1,20)(P2,15)(P3,20)(P4,10)(P5,15)(P6,20)(P7,25)(P8,10)
+
+Stable final order expected:
+(P4,10)(P8,10)(P2,15)(P5,15)(P1,20)(P3,20)(P6,20)(P7,25)
+
+The program also prints all merge operations, all Quick Sort
+partitions, and the comparison count.

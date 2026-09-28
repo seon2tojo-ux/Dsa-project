@@ -1,0 +1,60 @@
+# Intermediate Steps for the Given Data
+
+Input:
+
+20, 15, 20, 10, 15, 20, 25, 10
+
+Package IDs:
+
+P1, P2, P3, P4, P5, P6, P7, P8
+
+## Merge Sort
+
+Split:
+
+[20 P1, 15 P2, 20 P3, 10 P4] [15 P5, 20 P6, 25 P7, 10 P8]
+
+Further split:
+
+[20 P1, 15 P2] [20 P3, 10 P4] [15 P5, 20 P6] [25 P7, 10 P8]
+
+Sorted groups:
+
+[15 P2, 20 P1]
+[10 P4, 20 P3]
+[15 P5, 20 P6]
+[10 P8, 25 P7]
+
+Merge first half:
+
+[10 P4, 15 P2, 20 P1, 20 P3]
+
+Merge second half:
+
+[10 P8, 15 P5, 20 P6, 25 P7]
+
+Final stable merge:
+
+[10 P4, 10 P8, 15 P2, 15 P5, 20 P1, 20 P3, 20 P6, 25 P7]
+
+## Quick Sort
+
+Pivot rule used by this project:
+
+Last element of the current subarray.
+
+Initial pivot:
+
+P8(10)
+
+The exact partition sequence is printed by the program because Quick Sort
+intermediate arrangements depend on the partition operation.
+
+Important observation:
+
+Quick Sort can change the relative positions of equal-weight packages.
+Therefore, the final output is not guaranteed to preserve:
+
+10: P4 -> P8
+15: P2 -> P5
+20: P1 -> P3 -> P6
